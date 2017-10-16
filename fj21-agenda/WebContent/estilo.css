@@ -1,0 +1,73 @@
+/*Todo CSS deve começar especificando seu char set*/
+	CHARSET = "UTF-8";
+
+
+/*Formatação do corpo do site e dos paragravos, num geral*/
+		
+	p {
+		/* Paragrafo jutificado e com paraguafo Para frente*/
+		text-align: justify;
+		text-indent: 50px;
+	}
+		
+	body {
+		/*Fundo do site azul claro e a cor da letra deve ser preta*/
+		background-color: hsla(165, 81%, 93%, 0.5);
+		color: rgba(0,0,0,1);
+	}
+		
+	h1{
+		color: red;
+	
+	}	
+		
+/*Formatar as fotos que fazem parte da classe = "foto-legenda"*/
+
+		
+	figure.foto-legenda{	
+		/*Colocar uma borda na imagem, tamanho 8, em branco solido*/
+		border: 8px solid white;
+		/* A borda deve ter uma pequena sombra de cor preta*/
+		box-shadow: 1px 1px 4px black;
+		/*Colocar a figure como posição relativa, ou seja, vai ficar aonde
+		ela foi definida dentro do coigo HTML*/
+		position: relative;
+	}
+	
+	figure.foto-legenda img {
+		/*Colocar a imagem dentro da borda colocando a altura e a largura 100%
+		dentro da borda criada*/
+		width: 100%;
+		height: 100%
+	}
+	
+	figure.foto-legenda figcaption {
+		/*colocar a descrição da imagem como absoluta na parte de cima 
+			dentro da borda*/
+		position: absolute;
+		top: 0px;
+		
+		/*Colocar o backraund(atras do texto) uma cor preta um pouco transparente
+		em toda a borda com o tempo de um segundo (texto na cor branca)*/
+		background: rgba(0,0,0,.4);
+		width: 100%;
+		height: 100%;
+		color: white;
+		/*Criar um box dentro da borda, para nao passar caso haja formatações*/
+		box-sizing: border-box;
+		/*Agora sim podemos descer o texto um pouco*/
+		padding: 15px;
+		
+		/*fazer a descrição sumir e levar um segundo (ela vai aparecer
+		quando assarmos o mouse por cima usando a formatação com o hover)*/
+		opacity: 0;
+		transition: opacity 1s; 
+		
+	}
+	
+	/*Fazer uma ação quando se passa o mouse em cima de algo, usa-se o hover*/
+	figure.foto-legenda:HOVER figcaption {
+	
+		opacity: 1;
+	
+	}
