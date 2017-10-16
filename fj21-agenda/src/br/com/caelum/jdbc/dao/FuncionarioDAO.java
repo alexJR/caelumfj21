@@ -39,7 +39,7 @@ public class FuncionarioDAO {
 		
 	}
 	
-	// PESQUISA FUNCIONARIO
+	// PESQUISA FUNCIONARIO por id
 	public Funcionario pesquisa(int id_funcionarios){
 		String sql = "select * from funcionarios where id = ?";
 		Funcionario funcionario = new Funcionario();
